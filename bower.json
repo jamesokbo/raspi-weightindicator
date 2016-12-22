@@ -1,0 +1,25 @@
+{
+  "name": "braunker-indicator",
+  "description": "weight indicator",
+  "main": "server.js",
+  "authors": [
+    "Jaime Okhuysen <jaimeo@braunker.com>"
+  ],
+  "license": "ISC",
+  "homepage": "www.braunker.com",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "angular-resource": "^1.5.5",
+    "socket.io-client": "^1.4.6",
+    "bootstrap": "^3.3.7",
+    "ngBootbox": "^0.1.4",
+    "bootbox": "^4.4.0",
+    "angular-chart.js": "^0.10.2",
+    "angular-bootstrap": "^2.3.0",
+    "nvd3": "^1.8.5"
+  },
+  "install": {
+    "path": "/client/libs"
+  }
+}
