@@ -6,7 +6,7 @@
     <form class='well' novalidate ng-hide="hideForm">
         <div class="form-group">
             <label>Password</label>
-            <input type="password" class="form-control" name="password" ng-model="form.password">
+            <input type="password" class="form-control" name="password" ng-model="form.password" ng-virtual-keyboard>
         </div>
         <button type="submit" class="btn btn-success btn-lg" ng-click="login()">Login</button>
     </form>

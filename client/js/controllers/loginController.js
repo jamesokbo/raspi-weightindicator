@@ -1,4 +1,5 @@
-myApp.controller('loginController', ['$rootScope','$scope', '$location', 'SimpleAuthService', function($rootScope, $scope, $location, SimpleAuthService){
+myApp.controller('loginController', ['$rootScope','$scope', '$location', 'SimpleAuthService',  'ngVirtualKeyboardService',
+function($rootScope, $scope, $location, SimpleAuthService, ngVirtualKeyboardService){
     console.log("entered loginController");
     $scope.logInErrorMessage='';
     $scope.logInSuccessMessage='';
@@ -31,4 +32,16 @@ myApp.controller('loginController', ['$rootScope','$scope', '$location', 'Simple
           $scope.form.password='';
         });
     };
+    $scope.t06Config = {
+		layout: 'alpha',
+		extensions: {
+			addTyping: false
+		},
+		autoAccept: true,
+		usePreview: false,
+		autoUpdateModel: true
+	};
+	$scope.t06Change = function() {
+		console.log('t06 value changed');
+	};
 }]);

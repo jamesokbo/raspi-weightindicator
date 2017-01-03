@@ -5,7 +5,8 @@ var myApp=angular.module('myApp', [
     'ngAnimate',
     'btford.socket-io',
     'chart.js',
-    'nvd3'
+    'nvd3',
+    'ng-virtual-keyboard'
     ]).
     config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
         console.log("entered routeProvider");
