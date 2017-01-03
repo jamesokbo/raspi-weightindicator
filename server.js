@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(session({secret: 'jaimeo580324', saveUninitialized: true, resave: true}));
 
 
-var port= process.env.PORT;
+var port= 8080;
 
 app.set('view engine','ejs');
 app.set('views', path.resolve(__dirname,'client','views'));
