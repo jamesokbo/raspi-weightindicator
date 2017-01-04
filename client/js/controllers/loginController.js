@@ -1,5 +1,5 @@
-myApp.controller('loginController', ['$rootScope','$scope', '$location', 'SimpleAuthService',  'ngVirtualKeyboardService',
-function($rootScope, $scope, $location, SimpleAuthService, ngVirtualKeyboardService){
+myApp.controller('loginController', ['$rootScope','$scope', '$location', 'SimpleAuthService', '$mdKeyboard',
+function($rootScope, $scope, $location, SimpleAuthService, $mdKeyboard){
     console.log("entered loginController");
     $scope.logInErrorMessage='';
     $scope.logInSuccessMessage='';
@@ -7,6 +7,14 @@ function($rootScope, $scope, $location, SimpleAuthService, ngVirtualKeyboardServ
     $scope.form.password='';
     $scope.hideForm=false;
     $scope.user;
+    
+    //Keyboard
+    $scope.keyboardVisible = $mdKeyboard.isVisible();
+
+    $scope.hideKeyboard = function () {
+        $mdKeyboard.hide();
+    };
+
     
     $scope.login = function () {
         // initial values
@@ -32,16 +40,4 @@ function($rootScope, $scope, $location, SimpleAuthService, ngVirtualKeyboardServ
           $scope.form.password='';
         });
     };
-    $scope.t06Config = {
-		layout: 'alpha',
-		extensions: {
-			addTyping: false
-		},
-		autoAccept: true,
-		usePreview: false,
-		autoUpdateModel: true
-	};
-	$scope.t06Change = function() {
-		console.log('t06 value changed');
-	};
 }]);
